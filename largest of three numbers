@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main(){
+    int num1,num2,sum,difference,product,quiotient,remainder;
+    char operator;
+
+    printf("\n Operators are :\n +,-,*,/,%%");
+    printf("\n Enter the first number:");
+    scanf("%d",&num1);
+    printf("\n Enter the second number:");
+    scanf("%d",&num2);
+    printf("\n Enter the operator:");
+    scanf(" %c",&operator);
+    switch(operator){
+        case '+':
+               sum = num1 + num2;
+               printf("sum of %d and %d = %d",num1,num2,sum);
+               break;
+        case '-':
+               difference = num1 - num2;
+               printf("Difference of %d and %d = %d",num1,num2,difference);
+               break;
+        case '*':
+               product = num1 * num2;
+               printf("product of %d and %d = %d",num1,num2,product);  
+               break;
+        case '/':
+               quiotient = num1 / num2;
+               printf("quiotient of %d and %d = %d",num1,num2,quiotient); 
+               break;
+        case '%':
+               remainder = num1 % num2;
+               printf("remainder  of %d and %d = %d",num1,num2,remainder);  
+               break; 
+        case 6:printf("Invalid choices");
+               break;
+
+
+
+
+    }
+    return 0;
+}
