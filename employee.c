@@ -1,29 +1,30 @@
+/*
+Program to print n employee details using structure
+Author:Kevin P Tom
+Date:02-04-2025
+*/
 #include<stdio.h>
-typedef struct {
+typedef struct{
   char name[20];
   int id;
-  int salary;
-  } employee;
-  
-  int main(){
-  int n;
-  printf("enter the number of employees:");
-  scanf("%d",&n);
-    employee e[n];
-    for(int i=0;i<n;i++){
-      printf("enter the employee name:");
-      scanf("%s",&e[i].name);
-      printf("enter the id:");
-      scanf("%d",&e[i].id);
-      printf("enter the salary:");
-      scanf("%d",&e[i].salary);
-      }
-  printf("\n Employee Details:\n");
-      for (int i=0;i<n;i++){
-      printf("\n employee name:%s",e[i].name);
-      printf("\n id:%d",e[i].id);
-      printf("\n salary:%d",e[i].salary);
-      }
-      return 0;
+  float salary;
+}student;
+int main(){
+  int limit;
+  printf("Enter the number of the employee:");
+  scanf("%d",&limit);
+  student s[limit];
+  for(int i=0;i<limit;i++){
+    printf("Enter the name of the employee:");
+    getchar();
+    gets(s[i].name);
+    printf("\nEnter the id:");
+    scanf("%d",&s[i].id);
+    printf("\nEnter the salary:");
+    scanf("%f",&s[i].salary);
   }
-
+  for(int i=0;i<limit;i++){
+    printf("\nName:%s,Id:%d,Salary:%f",s[i].name,s[i].id,s[i].salary);
+  }
+  return 0;
+}
